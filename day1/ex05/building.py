@@ -2,6 +2,32 @@ import sys
 
 
 def main():
+    """
+    Analyzes and counts different types of characters in the input text.
+
+    This function takes command-line arguments and calculates the number of:
+    - Total characters (excluding the program name)
+    - Uppercase letters
+    - Lowercase letters
+    - Punctuation marks
+    - Spaces
+    - Digits
+
+    If no input is provided, it prompts the user to enter a value and exits.
+
+    Usage:
+        python script.py "Your text here"
+
+    Example:
+        Input: python script.py "Hello, World! 123"
+        Output:
+            The text contains 16 characters:
+            2 upper letters
+            8 lower letters
+            2 punctuation marks
+            2 spaces
+            3 digits
+    """
     if len(sys.argv) < 2:
         print("enter value")
         sys.exit()
