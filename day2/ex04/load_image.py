@@ -32,15 +32,9 @@ def ft_load(path: str) -> np.ndarray:
             return None
         img = img.convert("RGB")
         img_array = np.array(img)
-        print(f"The shape of image is: {img_array.shape}")
         return img_array
     except FileNotFoundError:
         print("Error: File not found. Please check the path.")
         exit(1)
     except Exception as e:
         print(f"Error: {e}")
-
-
-if __name__ == "__main__":
-    img_path = "animal.jpeg"
-    print(ft_load(img_path))
