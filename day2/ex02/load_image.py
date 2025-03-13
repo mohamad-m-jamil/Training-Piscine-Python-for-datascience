@@ -2,7 +2,7 @@ import numpy as np
 from PIL import Image
 
 
-def ft_load(path: str) -> np.ndarray:
+def main(path: str) -> np.ndarray:
     """
     Loads an image from a given file path and converts it to a NumPy array.
 
@@ -42,5 +42,4 @@ def ft_load(path: str) -> np.ndarray:
 
 
 if __name__ == "__main__":
-    img_path = "animal.jpeg"
-    print(ft_load(img_path))
+    main()

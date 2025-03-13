@@ -36,6 +36,9 @@ def give_bmi(height: list[int | float],
         if (type(height[i]) not in [int, float]):
             print("error")
             exit()
+        if height[i] <= 0 or weight[i] <= 0:
+            print("Error")
+            exit()
         cal = weight[i] / (height[i] * height[i])
         res.append(cal)
         i += 1
@@ -77,10 +80,3 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
             res.append(False)
         i += 1
     return (res)
-
-
-# height = [2.71, 1.15]
-# weight = [165.3, 38.4]
-# bmi = give_bmi(height, weight)
-# print(bmi, type(bmi))
-# print(apply_limit(bmi, 26))
